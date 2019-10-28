@@ -59,7 +59,7 @@ var PRESETS = map[string]PresetLocations{
 	"albania":      PresetLocations{"albania", "tirana", "durres", "vlore", "elbasan", "shkoder"},
 	"uganda":       PresetLocations{"uganda", "kampala", "mbarara", "mukono", "jinja", "arua", "gulu", "masaka"},
 	"zambia":       PresetLocations{"zambia", "lusaka", "kitwe", "ndola"},
-	"sri lanka":    PresetLocations{"sri%2Blanka","nugeegoda", "balangoda", "mawathagama", "ratnapura","medawachchiya", "poonewa", "colombo", "moratuwa", "negombo", "galle", "jaffna", "kelaniya", "ambalangoda", "panadura", "wadduwa", "moronthuduwa", "minuwangoda","kegalle","nuwraeliya","kirulapone","pitigala","alawwa","kurunegala","polgahawela","kuruwita","nugegoda","kalutara","horana","anuradhapura", "nivithigala", "kandy", "delgoda" ,"kalubowila", "homagama", "puthlam", "trincomalee", "kaduwela", "pitipana", "padukka", "akarawita", "bambalapitiya","batugampola", "hokandara", "kiriwattuduwa", "kolonnawa", "madapatha", "meegoda", "mullegama","matara","weligama", "pamunugama","avissawella","tangalle","beliatta","tissamaharama","ambalantota","hambantota","weeraketiya","wattala","jaela","meegamuwa","maharagama"},
+	"sri lanka":    PresetLocations{"sri%2Blanka","nugeegoda", "balangoda", "mawathagama", "ratnapura","medawachchiya", "poonewa", "colombo", "moratuwa", "negombo", "galle", "jaffna", "kelaniya", "ambalangoda", "panadura", "wadduwa", "moronthuduwa", "minuwangoda","kegalle","nuwraeliya","kirulapone","pitigala","alawwa","kurunegala","polgahawela","kuruwita","nugegoda","kalutara","horana","anuradhapura", "dalugama", "nivithigala", "kandy", "delgoda" ,"kalubowila", "homagama", "puthlam", "trincomalee", "kaduwela", "pitipana", "padukka", "akarawita", "bambalapitiya","batugampola", "hokandara", "kiriwattuduwa", "kolonnawa", "madapatha", "meegoda", "mullegama","matara","weligama", "pamunugama","avissawella","tangalle","beliatta","tissamaharama","ambalantota","hambantota","weeraketiya","wattala","jaela","meegamuwa","maharagama"},
 	"singapore":    PresetLocations{"singapore", "tampines","pasir%2Bris","bishan","Hougang"},
 	"latvia":       PresetLocations{"latvia", "latvija", "riga", "r%C4%ABga", "kuldiga", "kuld%C4%ABga", "ventspils", "liepaja", "liep%C4%81ja", "daugavpils", "jelgava", "jurmala", "j%C5%ABrmala"},
 	"romania":      PresetLocations{"romania", "bucharest", "cluj", "iasi", "timisoara", "craiova", "brasov", "sibiu", "constanta", "oradea", "galati", "ploesti", "pitesti", "arad", "bacau"},
@@ -77,7 +77,7 @@ var PRESETS = map[string]PresetLocations{
 	"nepal":        PresetLocations{"nepal", "kathmandu", "pokhara", "lalitpur", "bharatpur", "birgunj", "biratnagar", "janakpur", "ghorahi"},
 	"yemen":        PresetLocations{"yemen", "sana%27a", "taiz", "aden", "mukalla", "ibb", "marib"},
 	"mozambique":   PresetLocations{"mozambique", "maputo", "matola", "nampula", "beira", "sofala", "chimoio", "tete", "quelimane"},
-	"ivory coast":  PresetLocations{"ivory", "abidjan", "bouak%C3%A9", "daloa", "yamoussoukro"}}
+	"ivory coast":  PresetLocations{"ivory", "abidjan", "bouak%C3%A9", "daloa", "yamoussoukro", "divo"}}
 
 func Preset(name string) []string {
 	return PRESETS[name]
