@@ -89,3 +89,66 @@ get100Users = async cursor => {
 };
 
 get100Users(0);
+
+findByUsername = async username => {
+  if (username === "") {
+    alert("Please provide the username");
+    return;
+  }
+
+  const response = await fetch("user_list.txt");
+  const text = await response.text();
+  const lines = text.split("\n");
+
+  const usernames = lines.map(line => {
+    return { rank: line.split(":")[0], handle: line.split("@").slice(-1)[0] };
+  });
+  let result = usernames.find(user_name => {
+    return (
+      user_name.handle.split("\r")[0].toLowerCase() === username.toLowerCase()
+    );
+  });
+
+  let ul = document.getElementById("user-list");
+  let pagination = document.getElementById(`pagination`);
+  let li = document.createElement("li");
+  let div = document.createElement("div");
+  let img = document.createElement("img");
+  let anchor = document.createElement("a");
+  let resultElement = document.createElement("p");
+  resultElement.className = "font-weight-bold text-secondary";
+  resultElement.innerText = "No results to display";
+  li.className =
+    "list-group-item d-flex justify-content-between align-items-center";
+  pagination.innerHTML = "";
+  if (!result) {
+    ul.innerHTML = "";
+    li.appendChild(resultElement);
+    ul.appendChild(li);
+    return;
+  }
+  ul.innerHTML = "";
+
+  div.className = "image-parent";
+
+  img.src = `https://avatars.githubusercontent.com/${result.handle}`;
+  img.className = "rounded-circle  img-thumbnail";
+  img.alt = username;
+  img.style = "width: 60px;";
+  div.appendChild(img);
+
+  anchor.href = `https://github.com/${result.handle}`;
+  anchor.target = "_blank";
+  anchor.appendChild(
+    document.createTextNode(
+      `${result.rank.split("#").slice(-1)[0]} ${result.handle}`
+    )
+  );
+  li.appendChild(anchor);
+  li.appendChild(div);
+  ul.appendChild(li);
+};
+
+reset = () => {
+  location.reload();
+};
