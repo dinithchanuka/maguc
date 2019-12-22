@@ -1,6 +1,6 @@
 ### Most Active GitHub Users Count of Sri Lanka is Live now.
 
-go to: [https://niweera.gq/maguc/](https://niweera.gq/maguc/)
+go to: [https://maguc.niweera.gq](https://maguc.niweera.gq)
 
 Or you can run the MAGUC with your own criteria
 
